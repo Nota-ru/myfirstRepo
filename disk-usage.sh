@@ -14,8 +14,8 @@ else
 fi
 
 echo "The heaviest subfolder of $dir is:"
-top1=$(du /home/notaru -d 1 2>/dev/null | sort -rn | head -n 2 | \
+top1=$(du $dir -d 1 2>/dev/null | sort -rn | head -n 2 | \
          tail -n 1| cut -f 2)
-disk=$(du /home/notaru -d 1 2>/dev/null | sort -rn | head -n 2 | \
+disk=$(du $dir -d 1 2>/dev/null | sort -rn | head -n 2 | \
          tail -n 1| cut -f 1)
 echo "$top1 with disk usage of $disk"                   
