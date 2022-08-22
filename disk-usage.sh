@@ -14,3 +14,8 @@ else
 
 
 fi
+
+
+top1=$(du /home/pyprep02 -d 1 2>/dev/null | sort -rn | head -n 1 | cut -f 2)
+disk=$(du /home/pyprep02 -d 1 2>/dev/null | sort -rn | head -n 1 | cut -f 1)
+
